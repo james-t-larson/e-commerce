@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./Login.css"
+import logo from "./img/logo_light.png"
 import { Link, useHistory } from "react-router-dom"
 import { auth } from "./firebase"
 
@@ -38,7 +39,7 @@ function Login() {
             <Link to="/">
                 <img 
                 className="login__logo"
-                src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" 
+                src={logo} 
                 alt=""
                 />
             </Link>

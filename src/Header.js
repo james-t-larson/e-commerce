@@ -4,8 +4,8 @@ import "./Header.css"
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket"
 import SearchIcon from "@material-ui/icons/Search"
 import { useStateValue } from "./StateProvider"
-import Login from './Login'
 import { auth } from './firebase'
+import logo from './img/logo_dark.png'
 
 function Header() {
 
@@ -22,7 +22,7 @@ function Header() {
             <Link to="/">
                 <img
                     className="header__logo"
-                    src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                    src={logo}
                     alt=""
                 />
             </Link>
@@ -62,7 +62,7 @@ function Header() {
                         <ShoppingBasketIcon />
                         <span className="header__optionLineTwo header__basketCount">
                             {basket?.length} 
-                            {/* print basket length */}
+                            {/* print basket length if it is longer than 0*/}
                         </span>
                     </div>
                 </Link>
